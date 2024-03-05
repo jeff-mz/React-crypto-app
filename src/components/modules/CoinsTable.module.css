@@ -1,0 +1,51 @@
+.table {
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+  display: table;
+  overflow-y: scroll;
+}
+thead {
+  border-bottom: 1px solid #9db2bf;
+}
+th {
+  color: #dde6ed;
+  font-size: 22px;
+  text-align: left;
+  padding: 1rem 0.3rem;
+}
+td {
+  color: #f1f2f3;
+  font-size: 16px;
+  padding: 1rem 0rem;
+  border-bottom: 1px dotted #22262e;
+}
+.coin_img {
+  margin-right: 1rem;
+  width: 30px;
+}
+.chart {
+  width: 100px;
+}
+.none {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  .none {
+    display: table-cell;
+  }
+  .chart {
+    margin: 0px 28px;
+    margin-bottom: 1.5rem;
+  }
+  .coin_img {
+    width: 45px;
+  }
+  th {
+    font-size: 28px;
+  }
+  td {
+    font-size: 20px;
+  }
+}

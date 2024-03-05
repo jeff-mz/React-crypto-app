@@ -1,0 +1,41 @@
+.pagination {
+  max-width: 350px;
+  padding: 1rem;
+  margin: 1.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #22262e;
+  border-radius: 5px;
+}
+.page_number,
+span {
+  color: #9db2bf;
+}
+.btn {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  color: #9db2bf;
+  cursor: pointer;
+}
+.active {
+  padding: 5px;
+  font-size: 22px;
+  text-decoration: underline;
+  color: #536c7c;
+}
+@media (min-width: 720px) {
+  .pagination {
+    max-width: 500px;
+  }
+  .btn,
+  .page_number,
+  span {
+    font-size: 20px;
+  }
+  .active {
+    font-size: 32px;
+  }
+}
