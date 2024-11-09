@@ -6,6 +6,7 @@ import Pagination from "../modules/Pagination.jsx";
 import CurrencyChanger from "../modules/CurrencyChanger.jsx";
 import Search from "../modules/Search.jsx";
 import Modal from "../modules/Modal.jsx";
+import GridLoader from "react-spinners/GridLoader";
 
 function Homepage() {
   const [coins, setCoins] = useState([]);
@@ -25,32 +26,44 @@ function Homepage() {
   }, [page, currency]);
 
   return (
-    <div className={classes.container}>
-      <h1 className={classes.title}>MY Crypto App</h1>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "flex-start",
-        }}
-      >
-        <Search />
-        <CurrencyChanger currency={currency} setCurrency={setCurrency} />
-      </div>
-      <CoinsTable
-        coins={coins}
-        loading={loading}
-        currency={currency}
-        setChart={setChart}
-      />
-      <Pagination page={page} setPage={setPage} />
-      {!!chart && <Modal setChart={setChart} chart={chart} />}
-      <p className={classes.attribution}>
-        Made with 💗 by
-        <a href="https://github.com/jeff-mz" target="_blank">
-          Jafar Mirzapoor
-        </a>
-      </p>
-    </div>
+    <>
+      {loading ? (
+        <div style={{ margin: "auto", width: "100px" }}>
+          <GridLoader color="#DDE6ED" />
+        </div>
+      ) : (
+        <div className={classes.container}>
+          <h1 className={classes.title}>MY Crypto App</h1>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "flex-start",
+            }}
+          >
+            <Search />
+            <CurrencyChanger currency={currency} setCurrency={setCurrency} />
+          </div>
+          <CoinsTable
+            coins={coins}
+            loading={loading}
+            currency={currency}
+            setChart={setChart}
+          />
+          <Pagination page={page} setPage={setPage} />
+          {!!chart && <Modal setChart={setChart} chart={chart} />}
+          <p className={classes.attribution}>
+            Made by
+            <a
+              href="https://github.com/jeff-mz"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Jafar Mirzapoor
+            </a>
+          </p>
+        </div>
+      )}
+    </>
   );
 }
 

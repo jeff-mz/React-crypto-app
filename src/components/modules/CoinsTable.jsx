@@ -1,16 +1,13 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React, { Children } from "react";
 import chart_down from "../../assets/chart-down.svg";
 import chart_up from "../../assets/chart-up.svg";
 import classes from "./CoinsTable.module.css";
-import GridLoader from "react-spinners/GridLoader";
 import { marketChart } from "../../services/cryptoApi";
 
 function CoinsTable({ coins, loading, currency, setChart }) {
-  return loading ? (
-    <div style={{ margin: "auto", width: "100px" }}>
-      <GridLoader color="#DDE6ED" />
-    </div>
-  ) : (
+  return (
     <table className={classes.table}>
       <thead className={classes.table_head}>
         <tr className={classes.table_head_row}>

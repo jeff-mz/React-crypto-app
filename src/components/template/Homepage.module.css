@@ -3,7 +3,7 @@
   max-width: 1024px;
   padding: 1rem;
   margin: auto;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
 }
 .title {
   text-align: center;
@@ -21,4 +21,9 @@ a {
   color: #526d82;
   text-decoration: none;
   margin: 0px 5px;
+}
+@media (max-width: 512px) {
+  .container {
+    overflow-x: scroll;
+  }
 }

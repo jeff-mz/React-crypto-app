@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { searchCoin } from "../../services/cryptoApi";
-
+import styles from "./Search.module.css";
 function Search() {
   const [text, setText] = useState("");
   const [coins, setCoins] = useState([]);
@@ -48,16 +48,11 @@ function Search() {
         }}
       />
       <div>
-        <ul
-          style={{
-            backgroundColor: "#526D82",
-            zIndex: 10,
-            padding: "0px 10px",
-          }}
-        >
+        <ul className={styles.result_table}>
           {coins.map((coin) => {
             return (
               <li
+                key={coin.id}
                 style={{
                   height: "30px",
                   display: "flex",

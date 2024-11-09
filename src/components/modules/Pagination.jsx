@@ -15,11 +15,15 @@ function Pagination({ page, setPage }) {
         Pervious
       </button>
       <p
+        style={{ cursor: "pointer" }}
+        onClick={() => setPage(1)}
         className={`${styles.page_number} ${page === 1 ? styles.active : null}`}
       >
         1
       </p>
       <p
+        style={{ cursor: "pointer" }}
+        onClick={() => setPage(2)}
         className={`${styles.page_number} ${page === 2 ? styles.active : null}`}
       >
         2
@@ -34,11 +38,15 @@ function Pagination({ page, setPage }) {
       </>
 
       <p
+        style={{ cursor: "pointer" }}
+        onClick={() => setPage(9)}
         className={`${styles.page_number} ${page === 9 ? styles.active : null}`}
       >
         9
       </p>
       <p
+        style={{ cursor: "pointer" }}
+        onClick={() => setPage(10)}
         className={`${styles.page_number} ${
           page === 10 ? styles.active : null
         }`}

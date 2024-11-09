@@ -1,6 +1,6 @@
 .pagination {
   max-width: 350px;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 1.5rem auto;
   display: flex;
   align-items: center;
@@ -16,7 +16,7 @@ span {
   border: none;
   outline: none;
   background: none;
-  font-size: 18px;
+  font-size: 16px;
   color: #9db2bf;
   cursor: pointer;
 }
@@ -29,13 +29,14 @@ span {
 @media (min-width: 720px) {
   .pagination {
     max-width: 500px;
+    padding: 0.3rem 0.8rem;
   }
   .btn,
   .page_number,
   span {
-    font-size: 20px;
+    font-size: 16px;
   }
   .active {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
